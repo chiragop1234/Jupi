@@ -15,5 +15,5 @@ RUN pip3 install jupyterlab
 # Expose port 8080
 EXPOSE 8080
 
-# Start JupyterLab on port 8080
-CMD ["jupyter", "lab", "--ip=0.0.0.0", "--port=8080", "--no-browser", "--allow-root"]
+# Start JupyterLab on port 8080 without authentication
+CMD ["jupyter", "lab", "--ip=0.0.0.0", "--port=8080", "--no-browser", "--allow-root", "--NotebookApp.token=''"]
